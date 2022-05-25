@@ -1,0 +1,32 @@
+---
+import "../styles/style.css";
+let {title} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+</head>
+<body>
+    <header>
+        <div class="links">
+            <a href=".">Home</a>
+            <a href="exercicis">Exercicis</a>
+            <a href="projecte">Projecte</a>
+            <a href="about">About</a>
+            <a href="help">Help</a>
+        </div>
+        <h1>Daw1 Homepage</h1>
+        <h2>UF2</h2>
+    </header>
+    
+    <slot></slot>
+
+    <footer>
+        <h3>&copy;Copyright 2022</h3>
+    </footer>
+</body>
+</html>

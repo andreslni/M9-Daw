@@ -1,0 +1,16 @@
+.vid{
+    display: flex;
+    justify-content: center;
+}
+video{
+    display: block;
+    transition: 1.2s;
+}
+video:hover{
+    position: relative;
+
+    transition: 1.2s;
+    transform: scale(1.3) ;
+
+   
+}

@@ -1,0 +1,139 @@
+@import url("./reset.css");
+body{
+    background-color: rgb(148, 148, 234);
+}
+a{
+    text-decoration: none;
+    font-style: inherit;
+    color: black;
+}
+header, footer{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.links a{
+    padding: 1rem;
+    border: 1px solid black;
+}
+.links a:hover{
+    background-color: grey;
+}
+.links{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+header h1{
+    text-align: right;
+    margin-top: -70px;
+}
+header h2{
+    text-align: right;
+    margin-bottom: 1rem;
+}
+footer h3{
+    text-align: right;
+    margin: 1rem;
+}
+.container{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+.container a{
+    border: 1px solid black;
+    text-align: center;
+
+}
+.container  a img{
+    max-width: 70%;
+    max-height: 70%;
+    margin: auto;
+}
+.fondo{
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-template-rows: 1fr;
+    width: 100%;
+    overflow-x: auto;
+    gap: 1rem;
+}
+.element{
+    margin: 1rem;
+    background-color: rgb(46, 46, 57);
+    padding: 1rem;
+    grid-row: 1;
+    grid-column: auto;
+    transition: 0.3s;
+}
+
+.element img{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.element img:hover{
+    opacity: 0.7;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+    margin: auto;
+    display: none;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+
+

@@ -1,0 +1,73 @@
+---
+
+// Component Imports
+import MainLayout from '../layouts/MainLayout.astro';
+import "../styles/gallery.css"
+---
+<MainLayout title="Exercici1">
+   
+        
+    <div class="main">
+        <h1>Gallery</h1>
+        <div class="gallery">
+            <div class="gallery__item">
+                <img src="../../assets/coliseobig.jpg" />
+            </div>
+            <div class="gallery__item">
+                <img src="../../assets/tajmahalbig.jpg" />
+            </div>
+            <div class="gallery__item">
+                <img src="../../assets/coliseobig.jpg" />
+            </div>
+            <div class="gallery__item">
+                <img src="../../assets/tajmahalbig.jpg" />
+            </div>
+            <div class="gallery__item">
+                <img src="../../assets/coliseobig.jpg" />
+            </div>
+            <div class="gallery__item">
+                <img src="../../assets/tajmahalbig.jpg" />
+            </div>
+            <div class="gallery__item">
+                <img src="../../assets/coliseobig.jpg" />
+            </div>
+            <div class="gallery__item">
+                <img src="../../assets/tajmahalbig.jpg" />
+            </div>
+        </div>
+    </div>  
+    <script>
+        const images = document.querySelectorAll(".gallery__item img");
+        let imgSrc;
+        // src de la img clicada
+        images.forEach((img) => {
+            img.addEventListener("click", (e) => {
+                imgSrc = e.target.src;
+                //executa la funcio imgModal
+                imgModal(imgSrc);
+            });
+        });
+        //funcio que fara de modal
+        let imgModal = (src) => {
+            const modal = document.createElement("div");
+            modal.setAttribute("class", "modal");
+            
+            document.querySelector(".main").append(modal);
+            
+            const newImage = document.createElement("img");
+            newImage.setAttribute("src", src);
+            
+            const closeBtn = document.createElement("i"); // boton close
+            closeBtn.setAttribute("class", "fas fa-times closeBtn");
+            
+            modal.onclick = () => {
+                modal.remove();
+            };
+            modal.append(newImage, closeBtn);
+        };
+       
+        
+
+
+    </script>    
+</MainLayout>

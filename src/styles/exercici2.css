@@ -1,0 +1,18 @@
+
+.portada{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../../assets/let.jpg);
+    background-repeat: no-repeat;
+    
+}
+.cancion{
+    width: 80px;
+    padding: 10px;
+    
+
+}
+img{
+    width: 80px;
+
+}
